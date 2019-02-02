@@ -1,0 +1,13 @@
+{
+  "plugins": ["prettier"],
+  "extends": ["eslint-config-airbnb-base", "prettier"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+  },
+  "env": {
+    "browser": true
+  }
+}

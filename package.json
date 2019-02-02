@@ -1,0 +1,40 @@
+{
+  "name": "mgrsskls",
+  "version": "1.0.0",
+  "author": "Michael Großklaus <mail@mgrossklaus.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-stylelint": "^8.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "prettier": "^1.16.3",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "scripts": {
+    "lint:js": "eslint app/assets/javascripts",
+    "lint:css": "stylelint app/assets/stylesheets",
+    "fix:js": "eslint app/assets/javascripts --fix",
+    "fix:css": "stylelint app/assets/stylesheets --fix",
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "browserslist": [
+    "last 2 versions and > 0.5% and not ie 11 and not dead and not op_mini all"
+  ],
+  "resolutions": {
+    "browserslist": "4.4.1"
+  }
+}
