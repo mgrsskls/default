@@ -1,0 +1,7 @@
+{
+  "srcFolder": "src/components/",
+  "engine": "twig",
+  "extension": "twig",
+  "cssFiles": "src/assets/css/index.css",
+  "jsFiles": "src/assets/js/index.js"
+}

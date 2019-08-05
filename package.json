@@ -1,28 +1,32 @@
 {
-  "name": "mgrsskls",
-  "version": "1.0.0",
   "author": "Michael Großklaus <mail@mgrossklaus.de>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "cssnano": "^4.1.8",
-    "del": "^3.0.0",
-    "eslint": "^5.13.0",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "gulp": "^4.0.0",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "cssnano": "^4.1.10",
+    "del": "^5.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-eslint": "^5.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-imagemin": "^6.0.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-stylelint": "^8.0.0",
+    "gulp-stylelint": "^9.0.0",
+    "gulp-twig": "^1.2.0",
+    "imagemin-webp": "^5.1.0",
     "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.5.0",
-    "prettier": "^1.16.4",
-    "rollup": "^1.1.2",
-    "rollup-plugin-terser": "^4.0.4",
-    "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0"
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.18.0",
+    "rollup-plugin-terser": "^5.1.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "twig": "^1.13.3"
   },
   "scripts": {
     "lint:js": "eslint app/assets/javascripts",
@@ -35,7 +39,18 @@
   "browserslist": [
     "last 2 versions and > 0.5% and not ie 11 and not dead and not op_mini all"
   ],
-  "resolutions": {
-    "browserslist": "4.4.1"
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "ignoreFiles": "build/**"
+  },
+  "dependencies": {
+    "headman": "^0.1.7"
   }
 }
