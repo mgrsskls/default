@@ -9,6 +9,7 @@ const postcss = require("gulp-postcss");
 const postcssImport = require("postcss-import");
 const postcssPresetEnv = require("postcss-preset-env");
 const rollup = require("rollup");
+const rollupNodeResolve = require("rollup-plugin-node-resolve");
 const stylelint = require("gulp-stylelint");
 const terser = require("rollup-plugin-terser");
 const twig = require("gulp-twig");
@@ -67,7 +68,7 @@ gulp.task("build:js", () => {
   return rollup
     .rollup({
       input: `${folders.src.js}/index.js`,
-      plugins: [babel(), terser.terser()]
+      plugins: [rollupNodeResolve(), babel(), terser.terser()]
     })
     .then(bundle => {
       return bundle.write({
